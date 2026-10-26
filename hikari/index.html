@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>hikari — автомобили из Японии</title>
+<meta name="description" content="Премиальные автомобили с левым рулём из Японии с доставкой в Казахстан и Кыргызстан.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="style.css?v=3">
+</head>
+<body data-page="home">
+<main>
+  <section class="wrap hero">
+    <div class="hero-text">
+      <h1>Автомобили из Японии под ключ</h1>
+      <p>Выбираете машину в каталоге, а мы проверяем её, выкупаем и привозим в Алматы, Астану или Бишкек. Цену под ключ называем сразу.</p>
+      <form id="quick" class="quick">
+        <select name="make" aria-label="Марка"></select>
+        <select name="model" aria-label="Модель"></select>
+        <button class="btn">Найти</button>
+      </form>
+      <a class="link" href="catalog.html">Смотреть все <span id="count"></span> автомобилей →</a>
+    </div>
+    <div class="mosaic" id="mosaic"></div>
+  </section>
+
+  <section class="wrap">
+    <div class="bodies" id="bodies"></div>
+  </section>
+
+  <section class="wrap">
+    <div class="sec-head"><h2>Новые поступления</h2>
+      <div class="rail-nav"><button data-rail="-1" aria-label="Назад">←</button><button data-rail="1" aria-label="Вперёд">→</button></div></div>
+    <div class="rail" id="fresh"></div>
+  </section>
+
+  <section class="wrap how" id="how">
+    <h2>Как проходит покупка</h2>
+    <div class="how-grid">
+      <div><span>1</span><h3>Выбор</h3><p>В каталоге или по вашему запросу. Подбираем также с аукционов.</p></div>
+      <div><span>2</span><h3>Проверка</h3><p>Осмотр, видео, проверка истории и пробега.</p></div>
+      <div><span>3</span><h3>Договор</h3><p>Фиксируем цену под ключ. Оплата по этапам.</p></div>
+      <div><span>4</span><h3>Получение</h3><p>Доставка до вашего города и помощь с оформлением.</p></div>
+    </div>
+  </section>
+
+  <section class="wrap faq" id="faq">
+    <h2>Частые вопросы</h2>
+    <details><summary>Сколько времени занимает доставка?</summary><p>Обычно 4–8 недель, зависит от маршрута. Точный срок скажем, когда будем считать цену.</p></details>
+    <details><summary>Как происходит оплата?</summary><p>Частями. Сначала предоплата за выкуп машины, потом оплата доставки. Всё по договору.</p></details>
+    <details><summary>Можно ли заказать машину, которой нет в каталоге?</summary><p>Да, конечно. Напишите марку и модель, поищем у дилеров и на аукционах.</p></details>
+    <details><summary>Помогаете с растаможкой?</summary><p>Да. Таможенные платежи считаем заранее, чтобы потом не было сюрпризов.</p></details>
+  </section>
+
+  <section class="wrap contact" id="contact">
+    <h2>Расскажите, что ищете</h2>
+    <form data-lead class="lead lead-row">
+      <input name="name" placeholder="Имя" required>
+      <input name="phone" type="tel" placeholder="+7 ___ ___ __ __" required>
+      <input name="car" placeholder="Марка, модель, бюджет">
+      <button class="btn">Отправить</button>
+    </form>
+  </section>
+</main>
+<script src="../data/cars.js?v=3" charset="utf-8"></script>
+<script src="../shared/core.js?v=3" charset="utf-8"></script>
+<script src="site.js?v=3" charset="utf-8"></script>
+</body>
+</html>

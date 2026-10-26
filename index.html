@@ -1,0 +1,74 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Сайты автоэкспорта</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Manrope:wght@800&family=Rubik:wght@400;500;700&display=swap">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #f3f3f1; color: #161616; font: 16px/1.6 "Rubik", system-ui, sans-serif; }
+  .wrap { width: min(1180px, 100% - 32px); margin: 0 auto; padding: 64px 0; }
+  h1 { font-size: clamp(32px, 5vw, 52px); line-height: 1.1; margin: 0 0 16px; letter-spacing: -.02em; }
+  .intro { max-width: 680px; color: #5b5b5b; font-size: 18px; margin: 0 0 48px; }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .demo { border-radius: 18px; overflow: hidden; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.06); transition: .2s; display: flex; flex-direction: column; color: inherit; text-decoration: none; }
+  .demo:hover { transform: translateY(-4px); box-shadow: 0 16px 36px rgba(0,0,0,.12); }
+  .shot { aspect-ratio: 16 / 10; background-size: cover; background-position: center; position: relative; }
+  .shot::after { content: ""; position: absolute; inset: 0; }
+  .shot b { position: absolute; left: 20px; bottom: 16px; z-index: 1; font-size: 34px; }
+  .kuro .shot::after { background: linear-gradient(transparent 30%, rgba(11,11,12,.9)); }
+  .kuro .shot b { font: 500 38px "Cormorant Garamond", serif; letter-spacing: .3em; color: #c9a96e; }
+  .hikari .shot::after { background: linear-gradient(transparent 40%, rgba(246,245,242,.95)); }
+  .hikari .shot b { font: 800 36px "Manrope", sans-serif; letter-spacing: -.05em; color: #141414; }
+  .sora .shot::after { background: linear-gradient(transparent 30%, rgba(11,63,179,.92)); }
+  .sora .shot b { font-weight: 700; color: #fff; }
+  .body { padding: 22px 24px 26px; flex: 1; display: flex; flex-direction: column; }
+  .body h2 { margin: 0 0 6px; font-size: 20px; }
+  .body p { color: #5b5b5b; margin: 0 0 16px; }
+  .sw { display: flex; gap: 6px; margin-top: auto; }
+  .sw i { width: 28px; height: 28px; border-radius: 50%; border: 1px solid rgba(0,0,0,.08); }
+  .open { margin-top: 18px; font-weight: 500; }
+  .feat { margin-top: 56px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .feat div { background: #fff; border-radius: 14px; padding: 22px; }
+  .feat b { display: block; margin-bottom: 4px; }
+  .feat span { color: #5b5b5b; font-size: 15px; }
+  @media (max-width: 900px) { .grid, .feat { grid-template-columns: 1fr; } .wrap { padding: 40px 0; } }
+</style>
+<div class="wrap">
+  <h1>Сайт для экспорта автомобилей из&nbsp;Японии</h1>
+  <p class="intro">Три варианта дизайна. Внутри <span id="n"></span> настоящих машин с японского рынка: можно пофильтровать каталог, открыть машину и оставить заявку.</p>
+  <div class="grid" id="grid">
+    <a class="demo kuro" href="kuro/index.html">
+      <div class="shot"><b>KURO</b></div>
+      <div class="body"><h2>Тёмный премиум</h2><p>Для люксового сегмента: Rolls-Royce, Ferrari, Bentley. Акцент на фото и статус.</p>
+        <div class="sw"><i style="background:#0b0b0c"></i><i style="background:#1b1b1e"></i><i style="background:#c9a96e"></i><i style="background:#ece8e1"></i></div>
+        <span class="open">Открыть →</span></div>
+    </a>
+    <a class="demo hikari" href="hikari/index.html">
+      <div class="shot"><b>hikari</b></div>
+      <div class="body"><h2>Светлый минимализм</h2><p>Спокойный современный стиль, как у официальных дилеров. Много воздуха, крупные фото, FAQ.</p>
+        <div class="sw"><i style="background:#f6f5f2"></i><i style="background:#fff"></i><i style="background:#141414"></i><i style="background:#c0262d"></i></div>
+        <span class="open">Открыть →</span></div>
+    </a>
+    <a class="demo sora" href="sora/index.html">
+      <div class="shot"><b>SORA auto</b></div>
+      <div class="body"><h2>Автомаркетплейс</h2><p>Как крупные площадки: много фильтров, выдача списком, цены в $, ₸ и ¥, оценка выгодности цены относительно рынка.</p>
+        <div class="sw"><i style="background:#1463ff"></i><i style="background:#0b3fb3"></i><i style="background:#ff7a1a"></i><i style="background:#eef2f7"></i></div>
+        <span class="open">Открыть →</span></div>
+    </a>
+  </div>
+  <div class="feat">
+    <div><b>Каталог с фильтрами</b><span>Марка, модель, год, цена, пробег, кузов, сортировка</span></div>
+    <div><b>Страница авто</b><span>Галерея фото, характеристики, похожие машины</span></div>
+    <div><b>Заявки</b><span>Формы на подбор и расчёт под ключ, можно подключить WhatsApp/Telegram</span></div>
+    <div><b>Мобильная версия</b><span>Удобно смотреть с телефона, где чаще всего и ищут машины</span></div>
+  </div>
+</div>
+<script src="data/cars.js?v=3" charset="utf-8"></script>
+<script>
+  document.getElementById("n").textContent = CARS.cars.length;
+  // Card backgrounds: a real car photo per theme.
+  const pick = (m) => (CARS.cars.find((c) => c.make === m) || CARS.cars[0]).photo;
+  [["kuro", "Rolls-Royce"], ["hikari", "Porsche"], ["sora", "Lamborghini"]].forEach(([k, m]) =>
+    document.querySelector("." + k + " .shot").style.backgroundImage = `url("${pick(m)}")`);
+</script>

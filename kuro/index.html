@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KURO Motors — премиальные автомобили из Японии</title>
+<meta name="description" content="Люксовые автомобили с левым рулём из Японии с доставкой в Алматы, Астану и Бишкек.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="style.css?v=3">
+</head>
+<body data-page="home">
+<main>
+  <section class="hero">
+    <div class="wrap hero-in">
+      <p class="eyebrow">Токио → Алматы · Бишкек</p>
+      <h1>Премиальные автомобили из&nbsp;Японии</h1>
+      <p class="lead-text">Ferrari, Rolls-Royce, Lamborghini, Bentley, Porsche. Только левый руль. Сами смотрим машину у дилера, выкупаем и везём до вашего города.</p>
+      <form id="quick" class="quick">
+        <select name="make" aria-label="Марка"></select>
+        <select name="model" aria-label="Модель"></select>
+        <select name="price_to" aria-label="Бюджет">
+          <option value="">Любой бюджет</option><option value="100000">до $100 000</option><option value="200000">до $200 000</option>
+          <option value="300000">до $300 000</option><option value="500000">до $500 000</option>
+        </select>
+        <button class="btn btn-gold">Показать</button>
+      </form>
+      <p class="hero-stock"><span id="stock"></span> автомобилей в продаже сейчас</p>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="sec-head"><h2>Марки</h2><a href="catalog.html" class="link">Весь каталог →</a></div>
+    <div class="brands" id="brands"></div>
+  </section>
+
+  <section class="wrap">
+    <div class="sec-head"><h2>Избранное</h2><a href="catalog.html" class="link">Смотреть все →</a></div>
+    <div class="cards" id="featured"></div>
+  </section>
+
+  <section class="wrap" id="process">
+    <div class="sec-head"><h2>Как мы работаем</h2></div>
+    <ol class="steps">
+      <li><b>01</b><h3>Подбор</h3><p>Ищем у дилеров и на аукционах Японии. Первые варианты обычно присылаем в тот же день.</p></li>
+      <li><b>02</b><h3>Проверка</h3><p>Едем на место, снимаем видео, смотрим сервисную историю.</p></li>
+      <li><b>03</b><h3>Покупка</h3><p>Договор и оплата частями. Выкупаем машину, оформляем экспорт.</p></li>
+      <li><b>04</b><h3>Доставка</h3><p>Везём до Алматы или Бишкека и помогаем с растаможкой.</p></li>
+    </ol>
+  </section>
+
+  <section class="wrap cta" id="delivery">
+    <div>
+      <h2>Подберём автомобиль под ваш бюджет</h2>
+      <p class="muted">Напишите, что ищете и на какой бюджет. Пришлём 3–5 вариантов с фото и ценой до вашего города.</p>
+    </div>
+    <form data-lead class="lead lead-inline">
+      <input name="name" placeholder="Имя" required>
+      <input name="phone" type="tel" placeholder="Телефон / WhatsApp" required>
+      <input name="car" placeholder="Какой автомобиль ищете?">
+      <button class="btn btn-gold">Получить подборку</button>
+    </form>
+  </section>
+</main>
+<script src="../data/cars.js?v=3" charset="utf-8"></script>
+<script src="../shared/core.js?v=3" charset="utf-8"></script>
+<script src="site.js?v=3" charset="utf-8"></script>
+</body>
+</html>

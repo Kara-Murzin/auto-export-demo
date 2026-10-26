@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Каталог — KURO Motors</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="style.css?v=3">
+</head>
+<body data-page="catalog">
+<main class="wrap">
+  <div class="cat-head">
+    <h1>Каталог</h1>
+    <p class="muted"><span id="count"></span> автомобилей</p>
+    <button class="btn btn-line" id="toggle-filters">Фильтры</button>
+  </div>
+  <div class="cat-grid">
+    <aside class="side">
+      <form id="filters" class="filters">
+        <input type="search" name="q" placeholder="Поиск: модель, комплектация">
+        <label>Марка<select name="make"></select></label>
+        <label>Модель<select name="model"></select></label>
+        <label>Кузов<select name="body"></select></label>
+        <label>Год<span class="pair"><select name="year_from"></select><select name="year_to"></select></span></label>
+        <label>Цена, $<span class="pair"><input type="number" name="price_from" placeholder="от" min="0" step="10000"><input type="number" name="price_to" placeholder="до" min="0" step="10000"></span></label>
+        <label>Пробег до<select name="km_to"><option value="">Любой</option><option value="5000">5 000 км</option><option value="10000">10 000 км</option><option value="30000">30 000 км</option><option value="50000">50 000 км</option></select></label>
+        <label>Сортировка<select name="sort"><option value="new">Сначала новые</option><option value="deal">Сначала выгодные</option><option value="cheap">Сначала дешевле</option><option value="expensive">Сначала дороже</option><option value="km">По пробегу</option></select></label>
+        <button type="reset" class="btn btn-line">Сбросить</button>
+      </form>
+    </aside>
+    <div>
+      <div class="cards" id="grid"></div>
+      <nav class="pager" id="pager"></nav>
+    </div>
+  </div>
+</main>
+<script src="../data/cars.js?v=3" charset="utf-8"></script>
+<script src="../shared/core.js?v=3" charset="utf-8"></script>
+<script src="site.js?v=3" charset="utf-8"></script>
+</body>
+</html>

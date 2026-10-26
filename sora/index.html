@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SORA auto — автомобили из Японии в Казахстан и Кыргызстан</title>
+<meta name="description" content="Каталог автомобилей с левым рулём из Японии. Доставка в Алматы, Астану, Бишкек.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="style.css?v=3">
+</head>
+<body data-page="home">
+<main>
+  <section class="hero"><div class="wrap hero-in">
+    <div class="hero-copy">
+      <h1>Автомобили из Японии<br>с доставкой в <em>Казахстан</em> и <em>Кыргызстан</em></h1>
+      <p><b id="stock"></b> автомобилей с левым рулём в наличии у дилеров Японии</p>
+      <form id="quick" class="search-card">
+        <label>Марка<select name="make"></select></label>
+        <label>Модель<select name="model"></select></label>
+        <label>Кузов<select name="body"><option value="">Любой</option><option>Купе</option><option>Кабриолет</option><option>Седан</option><option>Внедорожник</option></select></label>
+        <label>Цена до, $<select name="price_to"><option value="">Любая</option><option value="100000">100 000</option><option value="200000">200 000</option><option value="300000">300 000</option><option value="500000">500 000</option></select></label>
+        <button class="btn btn-orange">Найти автомобиль</button>
+      </form>
+    </div>
+    <img id="hero-img" class="hero-img" alt="">
+  </div></section>
+
+  <section class="wrap">
+    <h2>Поиск по маркам</h2>
+    <div class="makes" id="makes"></div>
+  </section>
+
+  <section class="wrap">
+    <h2>По бюджету</h2>
+    <div class="budget" id="budget"></div>
+  </section>
+
+  <section class="wrap">
+    <div class="sec-head"><h2>Новые поступления</h2><a href="catalog.html" class="more">Все автомобили →</a></div>
+    <div class="tiles" id="fresh"></div>
+  </section>
+
+  <section class="wrap" id="steps">
+    <h2>Как купить автомобиль</h2>
+    <ol class="steps">
+      <li><h3>Выберите авто</h3><p>В каталоге или оставьте заявку на подбор.</p></li>
+      <li><h3>Получите расчёт</h3><p>Цена под ключ: авто, доставка, растаможка.</p></li>
+      <li><h3>Подпишите договор</h3><p>Выкупаем машину и готовим к отправке.</p></li>
+      <li><h3>Заберите машину</h3><p>В Алматы, Астане, Бишкеке или другом городе.</p></li>
+    </ol>
+  </section>
+
+  <section class="wrap calc" id="calc">
+    <div>
+      <h2>Расчёт доставки под ключ</h2>
+      <p>Напишите, какую машину хотите и куда везти. Менеджер посчитает всё: цену в Японии, доставку, растаможку и оформление.</p>
+    </div>
+    <form data-lead class="lead calc-form">
+      <label>Автомобиль<input name="car" placeholder="Например, Porsche 911 2023"></label>
+      <label>Город<select name="city"><option>Алматы</option><option>Астана</option><option>Шымкент</option><option>Бишкек</option><option>Ош</option></select></label>
+      <label>Телефон / WhatsApp<input name="phone" type="tel" placeholder="+7 / +996" required></label>
+      <button class="btn btn-orange">Получить расчёт</button>
+    </form>
+  </section>
+</main>
+<script src="../data/cars.js?v=3" charset="utf-8"></script>
+<script src="../shared/core.js?v=3" charset="utf-8"></script>
+<script src="site.js?v=3" charset="utf-8"></script>
+</body>
+</html>
